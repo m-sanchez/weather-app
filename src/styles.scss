@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/owfont-regular.css";
+
+$screenMediaGreen: #09f7a9;
+$primary: $screenMediaGreen !default;
+$text-color: #424242;
+$theme-colors: (
+  "primary": $primary
+);
+@import "~bootstrap/scss/bootstrap";
+body {
+  font-family: 'Lato';
+}
+
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+

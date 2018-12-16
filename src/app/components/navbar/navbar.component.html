@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">{{city}}</a>
+  <div class=" navbar-collapse" >
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    </ul>
+    <form class="form-inline my-2 my-lg-0" [formGroup]="searchForm">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" formControlName="citySearch" id="citySearch">
+      <button class="btn btn-outline-primary my-2 my-sm-0" (click)="newSearch()" [disabled]="!searchForm.valid">Search</button>
+    </form>
+  </div>
+</nav>

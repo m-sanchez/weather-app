@@ -1,0 +1,19 @@
+<div class="card" *ngIf="detailedDay">
+  <div class="card-header">
+   <strong>{{detailedDay.date| date:'EEE, MMM dd yyyy'}}</strong>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let singleForecast of detailedDay.forecast" class="list-group-item">
+      <strong class="text-primary">{{singleForecast.dt_txt | date:'hh:mm a'}}</strong>&nbsp;
+      <i class="owf owf-{{singleForecast.weather[0].id}} list-icon"></i>
+      <h5 class="card-title">{{singleForecast.weather[0].main}}</h5>
+      <p>
+        <strong>Temp:</strong> {{singleForecast.main.temp | tempConverter:'C'}}
+        <strong>Humidity:</strong>  {{singleForecast.main.humidity}}%
+      </p>
+    </li>
+  </ul>
+</div>
+
+
+

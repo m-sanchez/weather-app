@@ -1,0 +1,5 @@
+<div class="row" *ngIf="days && days.length">
+  <div class="col-xs-1 col-lg-1-5 col-sm-6 col-md-4 mb-3 " *ngFor="let day of days;let index = index">
+    <weather-single-day-summary [day]="day" [dayNumber]="index" [city]="city"></weather-single-day-summary>
+  </div>
+</div>

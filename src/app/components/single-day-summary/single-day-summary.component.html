@@ -1,0 +1,13 @@
+<div class="card" *ngIf="day">
+  <div class="card-header">
+    <strong>{{day.date| date:'EEE, MMM dd yyyy'}}</strong>
+  </div>
+  <div class="card-body">
+    <i class="owf owf-{{day.icon}} main-icon"></i>
+    <h5 class="card-title text-center">{{day.main}}</h5>
+    <p class="card-text"><strong>Max:</strong> {{day.high | tempConverter:'C'}}</p>
+    <p class="card-text"><strong>Min:</strong>  {{day.low| tempConverter:'C'}}</p>
+    <p class="card-text"><strong>Humidity:</strong>  {{day.humidity}}%</p>
+    <a routerLink="/day/{{city}}/{{dayNumber}}" class="btn btn-primary">View Detail</a>
+  </div>
+</div>
