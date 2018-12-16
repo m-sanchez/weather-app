@@ -29,11 +29,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     const paramsSubs = this.router.params.subscribe(params => {
       this.city = params['city'];
       if (this.city) {
-        this.alertService.info('Loading weather for ' + this.city);
+        this.alertService.info('Loading weather for ' + this.city + '. Please wait...');
         this.forecastService.searchByName(this.city);
       } else if (navigator.geolocation) {
-        this.alertService.info('Loading weather for your location');
-
+        this.alertService.info('Loading weather for your location. Please wait...');
         navigator.geolocation.getCurrentPosition((position) => {
           this.forecastService.getByCoordinates(position.coords);
         });

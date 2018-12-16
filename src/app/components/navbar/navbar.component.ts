@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subs = this.forecastService.citySubscription().subscribe((city: ICity) => {
-      this.city = city ? city.name + ' (' + city.country + ')' : '';
+      this.city = city ? city.name + ',' + city.country : '';
     });
   }
 
